@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="v8" class="com.netcracker.bean.V8" scope="prototype"/>
+    <bean id="diesel" class="com.netcracker.bean.Diesel" scope="prototype"/>
+
+    <bean id="ladaKalina" class="com.netcracker.bean.Car" scope="prototype">
+        <property name="engine" ref="v8"/>
+        <property name="vin" value="XTA490394-394-3"/>
+    </bean>
+
+    <bean id="ladaGranta" class="com.netcracker.bean.Car" autowire="byName">
+        <property name="engine" ref="v8"/>
+        <property name="vin" value="XTA490394-394-4"/>
+    </bean>
+
+    <bean id="ladaVesta" class="com.netcracker.bean.Car" scope="prototype" autowire="byName">
+        <property name="engine" ref="v8"/>
+        <property name="vin" value="XTA490394-394-5"/>
+    </bean>
+
+    <bean id="cayene" class="com.netcracker.bean.Car" autowire="byName">
+        <property name="engine" ref="diesel"/>
+        <property name="vin" value="WP0ZZZ92ZFS80777"/>
+    </bean>
+
+    <bean class = "com.netcracker.bean.NewBean" autowire="byType">
+        <property name="firstname" value="Ivan"/>
+        <property name="surname" value="Petrov"/>
+    </bean>
+
+
+</beans>
