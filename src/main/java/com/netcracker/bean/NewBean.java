@@ -8,8 +8,8 @@ public class NewBean{
 
 
     @Override
-    public String toString(){
-        return "NewBean{"+
+    public String toString() {
+        return "NewBean{" +
                 "firstname='"+firstname+'\''+
                 ", surname='"+surname+'\''+
                 '}';
