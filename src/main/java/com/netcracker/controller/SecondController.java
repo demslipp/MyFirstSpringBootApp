@@ -1,23 +1,22 @@
 package com.netcracker.controller;
 
-import com.netcracker.bean.Car;
+import com.netcracker.bean.NewBean;
 import com.netcracker.model.Greeting;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Controller{
 
-    @Qualifier("ladaGranta")
+public class SecondController{
+
     @Autowired
-    private Car car;
+    private NewBean newBean;
 
-    @GetMapping("/car")
-    public String greetingForm(Model model) {
+    @GetMapping("/test")
+    public String greetingForm(Model model){
         model.addAttribute("greeting", new Greeting());
-        return car.toString();
+        return newBean.toString();
     }
 }
