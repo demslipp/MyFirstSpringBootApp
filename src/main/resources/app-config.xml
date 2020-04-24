@@ -27,7 +27,7 @@
         <property name="vin" value="WP0ZZZ92ZFS80777"/>
     </bean>
 
-    <bean class="com.netcracker.bean.NewBean">
+    <bean class="com.netcracker.bean.NewBean" autowire="byType">
         <property name="firstname" value="Ivan"/>
         <property name="surname" value="Petrov"/>
     </bean>
